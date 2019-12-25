@@ -81,12 +81,10 @@
 
 <meta name="description" content="Anything For Nothing">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Category">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="外刊栈区">
+<meta property="og:url" content="http://yoursite.com/tags/%E5%84%BF%E7%AB%A5%E8%AF%BB%E6%9C%AC/index.html">
 <meta property="og:site_name" content="外刊栈区">
 <meta property="og:description" content="Anything For Nothing">
-<meta property="article:published_time" content="2019-12-21T06:52:32.000Z">
-<meta property="article:modified_time" content="2019-12-21T06:53:18.000Z">
 <meta property="article:author" content="Cheng">
 <meta name="twitter:card" content="summary">
 
@@ -118,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/儿童读本/"/>
 
 
 
 
 
-  <title>Category | 外刊栈区</title>
+  <title>标签: 儿童读本 | 外刊栈区</title>
   
 
 
@@ -143,7 +141,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,43 +245,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
+  
+  
+  
+  <div class="post-block tag">
 
-	<h1 class="post-title" itemprop="name headline">Category</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-        
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 4 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%96%E5%88%8A%E6%9D%82%E5%BF%97/">外刊杂志</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%BD%E8%AF%AD%E6%96%87%E8%AF%BB%E6%9C%AC/">美国语文读本</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E4%B9%A6%E7%B1%8D/">英语学习书籍</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
-        
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>儿童读本<small>标签</small>
+        </h1>
       </div>
+
       
-      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/12/25/AmericanBook001/" itemprop="url">
+              
+                <span itemprop="name">美国语文读本 | Evening At Home 家人团聚的夜晚</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-12-25T19:18:13+08:00"
+              content="2019-12-25" >
+          12-25
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
-    
-    
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -535,10 +544,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -675,13 +680,13 @@
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'Category'.length > 0
+      var isPost = ''.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'Category'
+        var title = ''
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
@@ -689,7 +694,7 @@
       else if (!isArchive && !isCategory && !isTag) { //is index page
         var titles = [] //array to titles
 
-        var postsstr = '' //if you have a better way to get titles of posts, please change it
+        var postsstr = 'titles.push("美国语文读本 | Evening At Home 家人团聚的夜晚");' //if you have a better way to get titles of posts, please change it
         eval(postsstr)
 
         var promises = titles.map(function (title) {
